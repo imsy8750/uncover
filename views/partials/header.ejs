@@ -1,0 +1,50 @@
+<html>
+    <head>
+		<meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>UNCOVER FOOTBALL</title>
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="css/font-awesome.min.css">
+        <link rel="stylesheet" href="css/animate.css">
+        <link href="css/animate.min.css" rel="stylesheet">
+        <link href="css/style.css" rel="stylesheet" />
+    </head>
+    <body>
+    <header id="header">
+     <nav class="navbar navbar-default navbar-static-top" role="banner">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+          <div class="navbar-brand">
+            <a href="/"><h1>Uncover football</h1></a>
+          </div>
+        </div>
+        <div class="navbar-collapse collapse">
+          <div class="menu">
+            <ul class="nav nav-tabs" role="tablist">
+              <li role="presentation"><a href="/">Home</a></li>
+              <li role="presentation"><a href="/clubs">Clubs</a></li>
+              <li role="presentation"><a href="/broadcasting">Broadcasting</a></li>
+              <li role="presentation"><a href="/fixtures">Fixtures</a></li>
+	             <% if(!currentUser){ %>
+                   <li role="presentation"><a href="/register">Register</a></li>
+			       <li role="presentation"><a href="/login">Login</a></li>
+			     <% } else { %>
+			       <li role="presentation"><a href="">Loged in as <%  currentUser.username %> </a></li>
+			       <li role="presentation"><a href="/logout">Logout</a></li>
+			     <% } %>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!--/.container-->
+    </nav>
+    <!--/nav-->
+    </header>
+	
