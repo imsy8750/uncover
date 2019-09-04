@@ -7,7 +7,7 @@ var express               = require("express"),
     passportLocalMongoose = require("passport-local-mongoose")
     
 //mongoose.connect("mongodb://localhost/auth_demo_app");
-mongoose.connect('mongodb+srv://shubham07:shubham07@@cluster0-1vgha.mongodb.net/test?retryWrites=true&w=majority', {
+mongoose.connect('mongodb+srv://imsy8752:shubham07@cluster0-1vgha.mongodb.net/test?retryWrites=true&w=majority', {
 	useNewUrlParser: true,
 	useCreateIndex: true
 }).then(() => {
@@ -109,6 +109,8 @@ function isLoggedIn(req, res, next){
 
 
 
-app.listen(3000, () => {
-	console.log('server listening on port 3000');
+const port = process.env.PORT || 3000;
+const ip = process.env.IP || "127.0.0.1";
+app.listen(port,function(){
+    
 });
